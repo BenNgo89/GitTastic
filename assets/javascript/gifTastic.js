@@ -17,6 +17,25 @@ $(document).ready(function() {
     }).done(function(response) {
         var results = response.data;
         console.log(results);
+        for (var i = 0; i < results.length; i++){
+            var topicDic = $("<div class='col-md-4'>");
+
+            var rating = results[i].rating;
+            var animated = results[i].images.fixed_height.url;
+            var still = results[i].images.fixed_height_still.url;
+            var image = $("<img>");
+            var p = $("<span>").text("Rating " + rating);
+
+            image.attr("src", still);
+            image.addClass("Giphy");
+            image.attr("data-state", "still");
+            image.attr("data-still", "still");
+            image.attr("data-animate", "animated");
+            topicDiv.append(p);
+            topicDiv.append(image);
+            
+
+        }
 
     })
 });
