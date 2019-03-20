@@ -1,7 +1,6 @@
-body {
-    align-content: center;
-    background-repeat: repeat;
-
+.navbar{
+    background-color: black;
+    color: white;
 }
 
 #instructions {
